@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cockroach Shooter</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/img/scope.png" type="image/x-icon">
+</head>
+<body>
+  <audio id="bgMusic" src="assets/msc/background-music.mp3" loop autoplay></audio>
+  <audio id="squashSound" src="assets/msc/kill-sound.mp3"></audio>
+
+  <div id="topContainer">
+    <div id="hud">
+      <span id="highScore">High Score: 0</span>
+      <span id="timer">Time: 0s</span>
+      <span id="killCount">Kills: 0</span>
+      <button onclick="toggleAudio()" id="muteBtn">Mute</button>
+    </div>
+  </div>
+
+  <h1 id="gameTitle">Kill the Cockroaches!!</h1>
+
+  <div id="centerContainer">
+    <div id="gameArea"></div>
+  </div>
+
+  <button id="startBtn">Start Game</button>
+  <div id="gameOver" style="display: none;">
+    <h1>Game Over</h1>
+    <p id="finalScore"></p>
+    <p id="finalHighScore"></p>
+    <button onclick="restartGame()">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
